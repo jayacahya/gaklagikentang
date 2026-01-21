@@ -398,6 +398,16 @@ class="min-h-screen relative bg-gradient-to-br from-indigo-700 via-purple-100 to
     }
   });
 </script>
+<script>
+  document.addEventListener('click', function (event) {
+    const isClickInsideMenu = menuMobile.contains(event.target);
+    const isClickMenuBtn = menuBtn.contains(event.target);
+
+    if (!isClickInsideMenu && !isClickMenuBtn) {
+      closeMenuFunc();
+    }
+  });
+</script>
 
 </body>
 </html>
